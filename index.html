@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>calculator</title>
+    </head>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <body>
+        <div class="container">
+            <div class="calc-body">
+                <p id="listeningMessage" style="display: none">Listening..</p>
+                <input type="text" id="display" readonly>
+                <div class="buttons">
+                    <button id="cancel-btn" onclick="clearDisplay()">C</button>
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="appendToDisplay('+')">+</button>
+                    <button onclick="appendToDisplay('-')">-</button>
+                    <button onclick="appendToDisplay('*')">x</button>
+                    <button onclick="appendToDisplay('/')">/</button>
+                    <button onclick="getResult()">=</button>
+                    <button onclick="backspace()">Back</button>
+                    <button id="enableVoiceMode" onclick="activateVoiceMode()">Enable Voice Mode</button>
+                </div>
+            </div>
+    
+            <div id="voiceCommandsReference" class="voice-ref" style="display: none;">
+                <strong>Voice Commands:</strong>
+                <ul>
+                    <li><b>plus</b> → +</li>
+                    <li><b>minus</b> → -</li>
+                    <li><b>times / into / x</b> → *</li>
+                    <li><b>divided / over</b> → /</li>
+                    <li><b>equals / calculate</b> → =</li>
+                    <li><b>clear</b> → Clears input</li>
+                    <li><b>back / backspace</b> → Removes last character</li>
+                </ul>
+            </div>
+        </div>
+    </body>    
+</html>
