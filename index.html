@@ -5,7 +5,11 @@
         <title>calculator</title>
     </head>
     <link rel="stylesheet" href="index.css">
-    <script src="index.js"></script>
+    <script src="index.js">
+        if (location.protocol !== 'https:') {
+            location.replace(`https:${location.href.substring(location.protocol.length)}`);
+        }
+    </script>
     <body>
         <div class="main-container">
             <div id="voiceCommandsReference" style="display: none;">
