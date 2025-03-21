@@ -1,12 +1,26 @@
 <!DOCTYPE html> 
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>calculator</title>
     </head>
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <body>
-        <div class="container">
+        <div class="main-container">
+            <div id="voiceCommandsReference" style="display: none;">
+                <strong>Voice Commands:</strong>
+                <ul>
+                    <li><b>plus</b> → +</li>
+                    <li><b>minus</b> → -</li>
+                    <li><b>times / into / x</b> → *</li>
+                    <li><b>divided / over</b> → /</li>
+                    <li><b>equals / calculate</b> → =</li>
+                    <li><b>clear</b> → Clears input</li>
+                    <li><b>back / backspace</b> → Removes last character</li>
+                </ul>
+            </div>
+            
             <div class="calc-body">
                 <p id="listeningMessage" style="display: none">Listening..</p>
                 <input type="text" id="display" readonly>
@@ -31,19 +45,6 @@
                     <button id="enableVoiceMode" onclick="activateVoiceMode()">Enable Voice Mode</button>
                 </div>
             </div>
-    
-            <div id="voiceCommandsReference" class="voice-ref" style="display: none;">
-                <strong>Voice Commands:</strong>
-                <ul>
-                    <li><b>plus</b> → +</li>
-                    <li><b>minus</b> → -</li>
-                    <li><b>times / into / x</b> → *</li>
-                    <li><b>divided / over</b> → /</li>
-                    <li><b>equals / calculate</b> → =</li>
-                    <li><b>clear</b> → Clears input</li>
-                    <li><b>back / backspace</b> → Removes last character</li>
-                </ul>
-            </div>
         </div>
-    </body>    
+    </body>          
 </html>

@@ -7,7 +7,7 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
+.main-container {
     display: flex;
     gap: 20px;
 }
@@ -98,4 +98,54 @@ button:active {
 
 #voiceCommandsReference li {
     margin: 5px 0;
+}
+@media (max-width: 600px) {
+    body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .main-container {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    #voiceCommandsReference {
+        width: 95%;
+        max-width: 300px;
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .calc-body {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    #display {
+        font-size: 20px;
+        height: 45px;
+    }
+
+    .buttons {
+        gap: 6px;
+    }
+
+    button {
+        height: 45px;
+        font-size: 18px;
+    }
+    #enableVoiceMode{
+        font-size: 0.8rem;
+        width: 100px;
+        padding: 8px 10px;
+    }
 }
